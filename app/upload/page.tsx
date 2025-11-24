@@ -137,7 +137,7 @@ export default function UploadPage() {
             onChange={(e) => setPrompt(e.target.value)}
             rows={3}
             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            placeholder='e.g., "These are from last night\'s event" or "For sunset-rooftop.jpg, mention the new happy hour"'
+            placeholder="e.g., These are from last night's event or For sunset-rooftop.jpg, mention the new happy hour"
           />
           <p className="mt-1 text-sm text-gray-500">
             Additional context to help Claude generate better captions for this batch.
