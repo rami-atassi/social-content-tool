@@ -1,11 +1,9 @@
 import Anthropic from '@anthropic-ai/sdk';
 
-if (!process.env.ANTHROPIC_API_KEY) {
-  throw new Error('ANTHROPIC_API_KEY environment variable is not set');
-}
-
+// Allow build to complete even without ANTHROPIC_API_KEY (needed for Vercel builds)
+// The error will be thrown at runtime if the API key is missing
 const anthropic = new Anthropic({
-  apiKey: process.env.ANTHROPIC_API_KEY,
+  apiKey: process.env.ANTHROPIC_API_KEY || '',
 });
 
 export interface GenerateCaptionParams {
